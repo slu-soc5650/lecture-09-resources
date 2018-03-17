@@ -1,0 +1,53 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+\usepackage{fancyvrb,xcolor}
+
+\definecolor{cverbbg}{gray}{0.93}
+
+\newenvironment{codeBlock}
+ {\SaveVerbatim{cverb}}
+ {\endSaveVerbatim
+  \flushleft\fboxrule=0pt\fboxsep=.5em
+  \colorbox{cverbbg}{%
+    \makebox[\dimexpr\linewidth-2\fboxsep][l]{\BUseVerbatim{cverb}}%
+  }
+  \endflushleft
+}
+
+% ========================================================
+
+% define the title
+\title{SOC 4650/5650: Lecture Prep 08 - Centroids}
+\author{Christopher Prener, Ph.D.}
+\date{March 19\textsuperscript{th}, 2018}
+% =======================================================
+\begin{document}
+% =======================================================
+\maketitle % generates the title
+% =======================================================
+
+\section{Directions}
+Complete all of the steps in Chapter 4 of Gorr and Kurland (2016) on pages 157 to 159 - these are the first three section under Tutorial 4-5 - ``Creating centroid coordinates in a table''. A replication video will be posted on YouTube. Your map file (\texttt{.mxd}) should be uploaded to your GitHub assignment repository in the \texttt{LecturePreps/LP-08} directory by 5:00pm on Wednesday, March 21\textsuperscript{st}, 2018.
+
+\vspace{5mm}
+\section{Additions and Changes}
+\begin{enumerate}
+\item Before the first step on page 157, add the \texttt{tl\_2010\_04013\_tract10.shp} shapefile from \texttt{DataLibrary/GISTutorial/MaricopaCounty}. Save the map file with the tract added to \texttt{LecturePreps/LP-08}.
+\item Skip question two on page 157 (asking you to remove joins).
+\item On page 158, in the section called ``Export a table'', you will need to create a geodatabase in your \texttt{LecturePreps/LP-08} directory for this section and the subsequent section. In your \textsf{Catalog window}, \textsf{right click} on the \texttt{LP-08} folder and select \textsf{New $\triangleright$ File Geodatabase}. Name it \texttt{lp-08} or similar and make sure it is saved in the \texttt{LP-08} folder.
+\item On page 158, on step 4 of the section ``Create a feature class from an XY table'', do not click the \textsf{Add Coordinate System button}. Instead, search for \texttt{NAD 1983} in the \textsf{XY Coordinate System} tab. Then, in the main window, drill down in the \texttt{Geographic Coordinate Systems} folder to \texttt{North America} and then select \texttt{NAD 1983} before clicking \textsf{OK}.
+\item On page 159, on step 8 of the section ``Create a feature class from an XY table'', zoom into the dense area of points on the lower right-hand side of the main centroid cluster. Then skip step 9.
+\item On page 159, at the end of the section titled ``Create a feature class frm an XY table'', export a map image as a \texttt{.pdf} file at 300 dpi.
+\end{enumerate}
+
+% =======================================================
+\end{document}

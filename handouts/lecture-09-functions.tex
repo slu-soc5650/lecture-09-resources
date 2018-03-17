@@ -1,0 +1,70 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+% subsection indenetation
+\newenvironment{subs}
+  {\adjustwidth{1em}{0pt}}
+  {\endadjustwidth}
+
+% ============================================================
+
+% define the title
+\title{SOC 4650/5650: Lecture 09 Functions}
+\author{Christopher Prener, Ph.D.}
+\date{Spring 2018}
+% ============================================================
+\begin{document}
+% ============================================================
+\maketitle % generates the title
+% ============================================================
+
+\vspace{5mm}
+\section{Packages}
+\begin{itemize}
+\item \texttt{base}
+\item \texttt{tidyverse}
+\begin{itemize}
+\item \texttt{dplyr}
+\end{itemize}
+\end{itemize}
+
+\vspace{5mm}
+\section{Assessing Variable Types}
+\begin{subs}
+\subsection{Variable Classes}
+\texttt{base::}{\color{red}\texttt{class}}\texttt{(\textit{obj})}
+
+\vspace{3mm}
+\subsection{Is Character?}
+\texttt{base::}{\color{red}\texttt{is.character}}\texttt{(\textit{obj})}
+
+\vspace{3mm}
+\subsection{Is Numeric?}
+\texttt{base::}{\color{red}\texttt{is.numeric}}\texttt{(\textit{obj})}
+\end{subs}
+
+\vspace{5mm}
+\section{Left Join}
+\begin{subs}
+\subsection{Identically Named ID Variable}
+\texttt{dplyr::}{\color{red}\texttt{left\_join}}\texttt{(x = \textit{xtable}, y = \textit{ytable}, by = "\textit{id}")}
+
+\vspace{3mm}
+\subsection{Differently Named ID Variable}
+\texttt{dplyr::}{\color{red}\texttt{left\_join}}\texttt{(x = \textit{xtable}, y = \textit{ytable}, \\by = c("\textit{xid}" = "\textit{yid}"))}
+
+\end{subs}
+
+\vspace{5mm}
+\section{Summary of Variables}
+\texttt{dplyr::}{\color{red}\texttt{glimpse}}\texttt{(\textit{data})}
+% ============================================================
+\end{document}
